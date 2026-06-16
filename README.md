@@ -41,59 +41,6 @@ The system features an **automated dependency installer** built right into the s
 * **Deep Learning Tracking:** `ultralytics`, `supervision`
 * **Utilities:** `tqdm`
 
----
-
-## 🔧 Installation & Setup
-
-1. **Clone the Repository:**
-```bash
-git clone https://github.com/tubakhxn/adas-perception-pipeline.git
-cd adas-perception-pipeline
-
-```
-
-
-2. **Set up a Virtual Environment (Recommended):**
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-```
-
-
-3. **Install Dependencies:**
-You can let the script auto-install packages on its first run, or install them manually:
-```bash
-pip install opencv-python numpy torch torchvision pillow scipy matplotlib supervision ultralytics tqdm
-
-```
-
-
-
----
-
-## 🚗 Usage
-
-Run the primary script via terminal arguments. By default, it looks for an active webcam (`0`).
-
-```bash
-# Run using default webcam (Index 0)
-python driving.py
-
-# Run on a local video file
-python driving.py path/to/dashcam_video.mp4
-
-# Run on an RTSP Network Stream
-python driving.py rtsp://username:password@ip_address:port/stream
-
-# Run without depth estimation (Optimized performance fallback for CPU-only systems)
-python driving.py --source path/to/video.mp4 --no-depth
-
-# Specify a custom output file destination
-python driving.py path/to/video.mp4 --output local_render.mp4
-
-```
-
 ### 🎮 Runtime Controls
 
 When the visualization pipeline window is focused, you can control execution dynamically:
